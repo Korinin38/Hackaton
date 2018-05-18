@@ -67,9 +67,13 @@ int main()
         t1 = gett (time[0] - '0', time[1] - '0', time[3] - '0', time[4] - '0');
         t2 = gett (time[6] - '0', time[7] - '0', time[9] - '0', time[10] - '0');
         event e(prior, t1, t2, name);
-        e.show();
         timet.push_back(e);//здесь могла быть ваша реклама
     }
+    sort(timet.begin(), timet.end());
+
+    forn(i, 0, timet.size())
+        timet[i].show();
+
 
     return 0;
 }

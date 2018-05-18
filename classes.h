@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 class event
 {
@@ -13,7 +14,7 @@ class event
         }
 
         long long prior;
-        int t1, t2;
+        int t1, t2, elder;
         std::string name;
         operator > (event sec)
         {
@@ -27,8 +28,8 @@ class event
         void show()
         {
             std::cout << "Event " << name
-                      << ": Priority - " << prior
-                      << "; Time - " << t1/60/10 << t1/60%10 << ":" << t1%60/10 << t1%60%10 << "-"
-                       << t2/60/10 << t2/60%10 << ":" << t2%60/10 << t2%60%10 << " (min)" << endl;
+                      << ":\nPriority - " << prior
+                      << ";\nTime - " << t1/60/10 << t1/60%10 << ":" << t1%60/10 << t1%60%10 << "-"
+                       << t2/60/10 << t2/60%10 << ":" << t2%60/10 << t2%60%10 << " (min)\n\n";
         }
 };
